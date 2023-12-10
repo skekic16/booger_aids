@@ -17,7 +17,6 @@ win32gui.EnumWindows(enum_windows, windows)
 
 
 
-user = os.environ.get('USERNAME')
 
 
 
