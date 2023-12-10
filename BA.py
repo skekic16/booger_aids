@@ -28,7 +28,7 @@ BLACKLISTED_DIRS = ['C:\\Windows\\', os.path.normpath(r"%s\AppData"%(os.environ[
 MAX_FILE_SIZE_MB = 25
 def check_file(file_path):
     allowed_extensions = ['.pdf', '.docx', '.xls', '.xlsx', '.docx', '.csv']
-    max_size_mb = 8
+    max_size_mb = 25
     if os.path.splitext(file_path)[1].lower() not in allowed_extensions:
         print(f"Skipping file {file_path} - invalid file type")
         return False
