@@ -18,6 +18,7 @@ win32gui.EnumWindows(enum_windows, windows)
 
 
 user = getpass.getuser()
+%a = user
 
 path = "C:\\Users\\%a" % user
 
