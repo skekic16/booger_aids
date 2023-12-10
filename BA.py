@@ -15,11 +15,7 @@ def enum_windows(hwnd, window_list):
 windows = []
 win32gui.EnumWindows(enum_windows, windows)
 
-# Hide all top-level windows
-for hwnd in windows:
-    if win32gui.IsWindowVisible(hwnd):
-        win32gui.ShowWindow(hwnd, win32con.SW_HIDE)
-        win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE, win32gui.GetWindowLong(hwnd, win32con.GWL_EXSTYLE) | win32con.WS_EX_TOOLWINDOW)
+
 
 user = getpass.getuser()
 
